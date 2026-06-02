@@ -1,0 +1,272 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 3rem;
+    /* Spacing between photo and text */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text {
+    text-align: left;
+    /* Alignment changes when side-by-side */
+    flex: 1;
+    /* Allows text to take available space */
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Sections */
+.section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 250px;
+    /* Adjust size as needed */
+    height: 250px;
+    /* Ensure width and height match for a circle */
+    border-radius: 50%;
+    /* This creates the circle */
+    object-fit: cover;
+    /* Prevents stretching, crops to center */
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    /* Soft outer border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Add depth */
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #2c3e50;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #777;
+    margin-top: 4rem;
+}
+
+.profile-pic-frame {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Makes the frame a circle */
+    overflow: hidden;
+    /* Crucial: Cuts off the image edges when it zooms */
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* CHANGE THIS NUMBER TO ZOOM IN OR OUT */
+    transform: scale(1.1);
+}
+
+.leadership-img-frame {
+    width: 70%;
+    max-height: none;
+    /* Removes the hard cap on height */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leadership-pic {
+    width: 100%;
+    height: auto;
+    /* Scales the height proportionally without clipping */
+    display: block;
+}
+
+/* Individual award item spacing */
+.award-item {
+    margin-bottom: 2rem;
+}
+
+.award-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Toggle Button Style */
+.btn-toggle {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0.5rem 0 1rem 1rem;
+    /* Indented slightly to align under bullet text */
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+
+.btn-toggle:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;
+}
